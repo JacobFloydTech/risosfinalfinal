@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+    background-image: url("./newbackground.png");
+    background-attachment: fixed;
+    backdrop-filter: blur(5px) brightness(50%); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container { 
+    overflow: hidden;
+}
+
+#container { 
+    overflow: hidden;
+}
+
+.squeezeButton { 
+    animation: squeezeButtonAnimation both 400ms ease-in-out;
+    animation-delay: 1.2s;
+}
+
+.videoFadeIn { 
+    animation: fade 2s both; 
+}
+
+.fadeOut { 
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+
+@keyframes squeezeButtonAnimation {
+    from { 
+        opacity: 0
+    } to { opacity: 1}
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .outlined-text {
+        color: yellow;
+        letter-spacing: 1px; 
+              font-family: 'Arial', sans-serif;
+        font-size: 13px;
+        -webkit-text-stroke: 0.2px black;
+    }
+}
+
+/* Media query for screens with a minimum width of 769px and maximum width of 1200px */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .outlined-text {
+        color: yellow;
+        letter-spacing: 1px; 
+              font-family: 'Arial', sans-serif;
+        font-size: 25px;
+        -webkit-text-stroke: 0.5px black;
+    }
+}
+
+/* Media query for screens with a minimum width of 1201px */
+@media screen and (min-width: 1201px) {
+    .outlined-text {
+        color: yellow;
+        letter-spacing: 1px; 
+              font-family: 'Arial', sans-serif;
+        font-size: 45px;
+        -webkit-text-stroke: 1px black;
+    }
+}
+
+
+#videoContainer.animateVideoContainerIn { 
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) { 
+    #videoContainer { 
+        opacity: 1;
+        transition: all 2s ease-in-out;
+    }
+}
+@media screen and (min-width: 601px) { 
+    #videoContainer { 
+        opacity: 0;
+        transition: all 2s ease-in-out;
+    }
+}
+
+
+html, body { 
+    background-color: "#393939";
+    overflow: auto;
+}
+
+.uiDesign { 
+    background-size: cover;
+    background-image: url('./gridBackground.jpg');
+}
+
+.gridUI > * { 
+    z-index: 30;
+}
+
+.gradient { 
+    background-image: linear-gradient(to right, #778190, #495C77);
+    background-size: 65% 200px;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+.svgBackgroundShadow > polygon { 
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+.menuButtonContainer { 
+    display: flex;
+    line-height: 40px;
+    color: #3D3D3B;
+}
+#numberInputField { 
+      appearance: textfield;
+
+}
+#numberInputField::-webkit-inner-spin-button,
+#numberInputField::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+@media (min-width: 1563px) { 
+    .button { 
+        border-radius: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobileLogo { 
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 800px) { 
+    .mobileLogo { 
+        transform: translateX(50%);
+    }
+}
+
+
+.fadeIn { 
+    animation: fade 4s ease-in-out;
+}
+
+.fadeInHeader { 
+    animation: fade 1.5s ease-in-out;
+}
+
+.contactGridCol { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 2px;
+}
+
+.boxShadow { 
+    box-shadow: 0px 0px 10px 10px  #fff; 
+}
+
+
+
+@keyframes fade  { 
+    from { opacity: 0}
+    to { opacity: 1}
+}
+
+
+
+.leftTransition { 
+    opacity: 0;
+}
+
+.rightTransition { 
+    opacity: 0;
+}
+
+
+.mission { 
+    animation: missionAnimation 500ms both;
+}
+
+.productAnimation { 
+    z-index: 40;
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(35%);
+    transition: all ease-out 500ms;
+
+}
+.productAnimation.animate { 
+    animation-delay: 200ms;
+    will-change: transform;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+#vision { 
+    opacity: 0;
+    transform: translateY(35%);
+    transition: all ease-out 500ms;
+}
+
+#vision.animateVision { 
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+
+@keyframes missionAnimation { 
+    from { 
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+.rightBentoGrid { 
+    transform: scale(0.6) translateX(-50%);
+    opacity: 0.6;
+    transition: all linear 400ms;
+}
+
+.leftBentoGrid { 
+    transform: scale(0.6) translateX(50%);
+    opacity: 0.6;
+    transition: all linear 400ms;
+}
+
+.animation { 
+    transform: scale(1) translateX(0%);
+    opacity: 1;
+}
+.animation { 
+    transform: scale(1) translateX(0%);
+    opacity: 1;
+}
+
+.backgroundFilter { 
+    animation: backgroundFadeIn 1.2s both ease-out;
+    
+}
+
+.videoText { 
+    animation: fade 1s ease-out both;
+}
+
+.buttons { 
+   animation: fade 1.5s ease-out both;
+   animation-delay: 2s;
+}
+
+
+.chemicalSlide { 
+    animation: chemicalSlideIn 500ms ease-out both;
+}
+
+@keyframes fade {
+	0%  {
+		opacity: 0;
+		
+	}
+	100%  {
+		opacity: 1;
+	
+	}
+}
+
+@keyframes backgroundFadeIn { 
+    from { 
+       opacity: 0;
+    } to { 
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes chemicalSlideIn { 
+    from { 
+        opacity: 0;
+        transform: translateX(20%);
+    } to { 
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
